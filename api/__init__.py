@@ -9,6 +9,6 @@ def create_app():
     init_db(app)
 
     from .routes import main
-    app.register_blueprint(main)
+    app.register_blueprint(main, url_prefix="/api")
 
     return app
